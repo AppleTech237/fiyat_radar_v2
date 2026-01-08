@@ -23,7 +23,7 @@
 
             {% if user.is_authenticated %}
             <div class="mt-4 p-3 border rounded bg-light">
-                <h5>🔔 Follow this price</h5>
+                <h5>Follow this price</h5>
                 <p class="small text-muted">Get alerted if the price drop.</p>
                 <a href="{% url 'create_alert' product.id %}" class="btn btn-outline-primary">
                     Create a price alert</a>

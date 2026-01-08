@@ -9,10 +9,10 @@
         </div>
     </div>
 
-    <div class="row row-cols-1 row-cols-md-6 g-4">
+    <div class="row row-cols-1 row-cols-md-5 g-4">
         {% for p in products %}
         <div class="col">
-            <div class="card h-100 shadow-sm border-0">
+            <div class="card h-100 shadow-sm border-1">
                 {% if p.image %}
                 <img src="{{ p.image.url }}" class="card-img-top p-3" alt="{{ p.name }}"
                     style="height: 200px; object-fit: contain;">
@@ -25,13 +25,13 @@
                 {% endif %}
 
                 <div class="card-body">
-                    <span class="badge bg-info text-dark mb-2">{{ p.category }}</span>
+                    <span class="badge bg-dark text-white mb-2">{{ p.category }}</span>
                     <h5 class="card-title text-dark">{{ p.name }}</h5>
                     <p class="card-text text-secondary small">{{ p.description|truncatewords:15 }}</p>
                 </div>
                 <div class="card-footer bg-white border-0 pb-3">
                     <div class="d-grid">
-                        <a href="{% url 'product_detail' p.id %}" class="btn btn-primary">
+                        <a href="{% url 'product_detail' p.id %}" class="btn btn-outline-primary btn-sm">
                             Check prices</a>
                     </div>
                 </div>

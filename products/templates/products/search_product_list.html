@@ -30,10 +30,32 @@
     <ul>
         {% for product in products %}
 
-        <a href="{% url 'product_detail' product.id %}" class="btn btn-primary">
-            {{ product.name }}
-        </a>
+       <div class="col">
+            <div class="card shadow-sm border-1">
+                {% if product.image %}
+                <img src="{{ product.image.url }}" class="card-img-top p-3" alt="{{ product.name }}"
+                    style="height: 200px; object-fit: contain;">
+                {% elif product.image_url %}
+                <img src="{{ product.image_url }}" class="card-img-top p-3" alt="{{ product.name }}"
+                    style="height: 200px; object-fit: contain;">
+                {% else %}
+                <img src="https://via.placeholder.com/200x200?text=No+image" class="card-img-top p-3"
+                    alt="No image">
+                {% endif %}
 
+                <div class="card-body">
+                    <span class="badge bg-dark text-white mb-2">{{ product.category }}</span>
+                    <h5 class="card-title text-dark">{{ product.name }}</h5>
+                    <p class="card-text text-secondary small">{{ product.description|truncatewords:15 }}</p>
+                </div>
+                <div class="card-footer bg-white border-0 pb-3">
+                    <div class="d-grid">
+                        <a href="{% url 'product_detail' product.id %}" class="btn btn-outline-primary btn-sm">
+                            Check prices</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         {% endfor %}
     </ul>
 

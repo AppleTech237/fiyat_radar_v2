@@ -21,7 +21,7 @@
             <form action="{% url 'search_products' %}" method="GET" class="d-flex w-33">
                 <input name="q" class="form-control rounded-pill ms-4 py-1 my-2" type="search"
                     placeholder="Search products" aria-label="Search" value="{{ query|default:'' }}">
-                <button class="btn btn-outline-light ms-2 rounded-pill  py-0 my-2 " type="submit">Search</button>
+                <button class="btn btn-outline-light ms-2 rounded-pill  py-0 my-2 btn-sm " type="submit">Search</button>
             </form>
 
             <ul class="navbar-nav ms-auto align-items-center">
@@ -35,6 +35,9 @@
 
                 <li class="nav-item">
                     <a class="nav-link text-white me-3" href="{% url 'all_products' %}">All products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white me-3" href="{% url 'store_list' %}">Our Partner Stores</a>
                 </li>
 
                 <li class="nav-item">
@@ -61,7 +64,7 @@
         </div>
     </nav>
 
-    <main >
+    <main class="main mb-5">
         {% block content %}
         {% endblock %}
     </main>
@@ -72,6 +75,7 @@
             <a href="{% url 'about' %}" class="me-3">About Us</a>
             <a href="{% url 'contact' %}">Contact</a>
             <a href="{% url 'all_products' %}" class="ms-3">All Products</a>
+            <a href="{% url 'store_list' %}" class="me-3">Stores</a>
             
         </div>
 
