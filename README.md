@@ -65,7 +65,7 @@ fiyat_radar/
 ### Jean Innocent Manta Nsangou
 * login.html
 * register.html
-* user_profile.html
+* user_profile.htmls
 * accounts/forms.py
 * account/urls.py
 * accounts/views.py
