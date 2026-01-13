@@ -28,7 +28,7 @@ Projenin temel hedefleri şunlardır:
 
 ## Proje Yapısı
 ```text
-fiyat_radar_v2/
+fiyat_radar/
 │
 ├── accounts/      → Kullanıcı yönetimi (login, register, user_profile)        
 ├── pages/         → Statik sayfalar (Home, About, Contact)      
