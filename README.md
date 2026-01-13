@@ -13,7 +13,6 @@ Fiyat Radar, Django ile geliştirilmiş bir web uygulamasıdır.
 Bu uygulamanın amacı, kullanıcıların farklı süpermarketlerde satılan
 ürünlerin fiyatlarını kolayca karşılaştırabilmesini sağlamaktır.
 
-Projenin temel hedefleri şunlardır:
 - Fiyat karşılaştırmasını hızlı ve anlaşılır hale getirmek  
 - Kullanıcıların daha ekonomik alışveriş yapmasına yardımcı olmak  
 - Sade, modern, responsive ve kullanıcı dostu bir arayüz sunmak  
