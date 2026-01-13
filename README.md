@@ -19,7 +19,7 @@ Projenin temel hedefleri şunlardır:
 - Sade, modern, responsive ve kullanıcı dostu bir arayüz sunmak  
 - Django tabanlı web uygulaması geliştirme becerilerini pekiştirmek  
 
-## Kullanılan Teknolojiler
+## Öğrenilen Teknolojiler
 - Python 3.x  
 - Django 4.x  
 - HTML5  
