@@ -9,9 +9,9 @@
 - Mario Enrique Motede Dasilva  
 
 ## Projenin Amacı
-Fiyat Radar, Django tabanlı olarak geliştirilen bir web uygulamasıdır.
-Uygulamanın amacı, kullanıcıların farklı marketlerde sunulan ürünlerin fiyatlarını
-karşılaştırarak daha bilinçli ve ekonomik alışveriş yapmalarını sağlamaktır.
+Fiyat Radar, Django framework kullanılarak geliştirilmiş bir web uygulamasıdır.
+Bu uygulama, kullanıcıların farklı marketlerde satılan ürünlerin fiyatlarını
+kolay ve hızlı bir şekilde karşılaştırabilmelerini amaçlamaktadır.
 
 Projenin temel hedefleri şunlardır:
 - Fiyat karşılaştırmasını hızlı ve anlaşılır hale getirmek  
