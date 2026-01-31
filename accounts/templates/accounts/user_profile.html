@@ -4,8 +4,7 @@
 {% block content %}
 <div class="container mt-5">
     <div class="row justify-content-center">
-        <div class="col-md-6">
-            <div class="card shadow-lg border-0 rounded-3">
+        <div class="col-md-8"> <div class="card shadow-lg border-0 rounded-3">
                 
                 <div class="card-header bg-primary text-white text-center py-3">
                     <h4 class="mb-0 fw-bold">Profilim</h4>
@@ -18,12 +17,26 @@
                             <small class="text-muted">Uyarılar oluşturuldu</small>
                         </div>
                         <div class="col border-start">
-                            <h4 class="fw-bold mb-0 text-success">
-                                {{ number_of_alerts }}
-                            </h4>
+                            <h4 class="fw-bold mb-0 text-success">{{ number_of_alerts }}</h4>
                             <small class="text-muted">Uyarılar bulundu</small>
                         </div>
                     </div>
+
+                    {% if triggered_alerts %}
+                    <div class="alert alert-success border-0 shadow-sm mb-4">
+                        <h5 class="alert-heading fw-bold"><i class="bi bi-check-circle-fill me-2"></i>Fiyat Yakalandı!</h5>
+                        <p class="small mb-0">Aşağıdaki ürünler hedeflediğiniz fiyata ulaştı:</p>
+                        <hr>
+                        <ul class="mb-0">
+                            {% for alert in triggered_alerts %}
+                            <li>
+                                <strong>{{ alert.product.name }}</strong>: 
+                                {{ alert.target_price }} TL hedefine ulaşıldı!
+                            </li><br>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
 
                     <hr>
 

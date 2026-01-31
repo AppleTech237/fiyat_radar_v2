@@ -18,13 +18,17 @@ def register(request):
 
 @login_required
 def user_profile(request):
-    count_alerts = Alert.objects.filter(user=request.user).count()
-    number_of_alerts = Alert.objects.filter(user=request.user, price_alert=True).count()
+    
+    all_alerts = Alert.objects.filter(user=request.user)
+    count_alerts = all_alerts.count()
+    
+    
+    triggered_alerts = all_alerts.filter(is_triggered=True)
+    number_of_alerts = triggered_alerts.count()
     
     context = {
         'count_alerts': count_alerts,
         'number_of_alerts': number_of_alerts,
+        'triggered_alerts': triggered_alerts,
     }
     return render(request, 'accounts/user_profile.html', context)
-
-
